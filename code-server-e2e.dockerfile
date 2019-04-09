@@ -1,7 +1,7 @@
 FROM node:8.15.0
 
 # Install puppeteer deps.
-RUN apt-get update && apt-get install -y gconf-service \
+RUN apt-get update && apt-get install -qy gconf-service \
 	libnss3 \
 	libasound2 \
 	libatk1.0-0 \
@@ -39,4 +39,4 @@ RUN apt-get update && apt-get install -y gconf-service \
 	wget
 
 # Ensure that yarn is installed.
-RUN npm i -g yarn@1.12.3
+RUN npm i -g yarn@1.12.3 npx

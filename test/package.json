@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "test": "./scripts/test.sh",
-    "test:jest": "jest --forceExit --verbose",
+    "test:jest": "npx jest --forceExit --verbose",
     "test:docker": "cd .. && docker run --rm -v \"${PWD}:/code-server\" code-server-e2e bash -c 'cd /code-server/test && yarn test:jest'",
     "build:docker": "cd .. && docker build -t code-server-e2e -f code-server-e2e.dockerfile ."
   },
@@ -14,10 +14,7 @@
     "@types/jest": "^24.0.11",
     "@types/jest-environment-puppeteer": "^4.0.0",
     "@types/puppeteer": "^1.12.3",
-    "@types/xml2js": "^0.4.3",
-    "jest": "^24.7.1",
-    "puppeteer": "^1.14.0",
-    "ts-jest": "^24.0.2"
+    "@types/xml2js": "^0.4.3"
   },
   "jest": {
     "globals": {
